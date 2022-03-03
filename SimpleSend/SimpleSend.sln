@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31313.79
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleSend", "SimpleSend\SimpleSend.csproj", "{78815461-EA68-4F11-A54C-B53A542B7944}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{78815461-EA68-4F11-A54C-B53A542B7944}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78815461-EA68-4F11-A54C-B53A542B7944}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78815461-EA68-4F11-A54C-B53A542B7944}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78815461-EA68-4F11-A54C-B53A542B7944}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {24814BB1-6CE3-4177-852D-06DBAC7BF8EA}
+	EndGlobalSection
+EndGlobal
