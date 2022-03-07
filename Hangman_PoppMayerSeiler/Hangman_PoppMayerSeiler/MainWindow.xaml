@@ -1,0 +1,87 @@
+﻿<Window x:Class="Hangman_PoppMayerSeiler.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Hangman_PoppMayerSeiler"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Rectangle Name="LetterUnderline0" Fill="Black" HorizontalAlignment="Left" Height="16" Margin="108,366,0,0" Stroke="Black" VerticalAlignment="Top" Width="40"/>
+        <Rectangle x:Name="LetterUnderline1" Fill="Black" HorizontalAlignment="Left" Height="16" Margin="164,366,0,0" Stroke="Black" VerticalAlignment="Top" Width="40"/>
+        <Rectangle x:Name="LetterUnderline2" Fill="Black" HorizontalAlignment="Left" Height="16" Margin="226,366,0,0" Stroke="Black" VerticalAlignment="Top" Width="40"/>
+        <Rectangle x:Name="LetterUnderline3" Fill="Black" HorizontalAlignment="Left" Height="16" Margin="288,366,0,0" Stroke="Black" VerticalAlignment="Top" Width="40"/>
+        <Rectangle x:Name="LetterUnderline4" Fill="Black" HorizontalAlignment="Left" Height="16" Margin="351,366,0,0" Stroke="Black" VerticalAlignment="Top" Width="40"/>
+        <Rectangle x:Name="LetterUnderline5" Fill="Black" HorizontalAlignment="Left" Height="16" Margin="416,366,0,0" Stroke="Black" VerticalAlignment="Top" Width="40"/>
+        <Rectangle x:Name="LetterUnderline6" Fill="Black" HorizontalAlignment="Left" Height="16" Margin="477,366,0,0" Stroke="Black" VerticalAlignment="Top" Width="40"/>
+        <Rectangle x:Name="LetterUnderline7" Fill="Black" HorizontalAlignment="Left" Height="16" Margin="536,366,0,0" Stroke="Black" VerticalAlignment="Top" Width="40"/>
+        <Rectangle x:Name="LetterUnderline8" Fill="Black" HorizontalAlignment="Left" Height="16" Margin="597,366,0,0" Stroke="Black" VerticalAlignment="Top" Width="40"/>
+        <Rectangle x:Name="LetterUnderline9" Fill="Black" HorizontalAlignment="Left" Height="16" Margin="656,366,0,0" Stroke="Black" VerticalAlignment="Top" Width="40"/>
+        
+        <Button Name="Btn_GameStart" Content="Start" HorizontalAlignment="Left" Margin="204,21,0,0" VerticalAlignment="Top" Width="84" Height="32" Click="Btn_GameStart_Click"/>
+        <Button Name="Btn_GameStop" Content="Stop" HorizontalAlignment="Left" Margin="307,21,0,0" VerticalAlignment="Top" Width="84" Height="32" Click="Btn_GameStop_Click"/>
+
+        <TextBox Name="TBMyWord" HorizontalAlignment="Left" Height="32" Margin="20,21,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="165"/>
+        <TextBox Name="TBLetter0" IsReadOnly = "True" HorizontalAlignment="Left" Height="49" Margin="108,312,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="40"/>
+        <TextBox Name="TBLetter1" IsReadOnly = "True" HorizontalAlignment="Left" Height="49" Margin="164,312,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="40"/>
+        <TextBox Name="TBLetter2" IsReadOnly = "True" HorizontalAlignment="Left" Height="49" Margin="226,312,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="40"/>
+        <TextBox Name="TBLetter3" IsReadOnly = "True" HorizontalAlignment="Left" Height="49" Margin="288,312,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="40"/>
+        <TextBox Name="TBLetter4" IsReadOnly = "True" HorizontalAlignment="Left" Height="49" Margin="351,312,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="40"/>
+        <TextBox Name="TBLetter5" IsReadOnly = "True" HorizontalAlignment="Left" Height="49" Margin="416,312,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="40"/>
+        <TextBox Name="TBLetter6" IsReadOnly = "True" HorizontalAlignment="Left" Height="49" Margin="477,312,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="40"/>
+        <TextBox Name="TBLetter7" IsReadOnly = "True" HorizontalAlignment="Left" Height="49" Margin="536,312,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="40"/>
+        <TextBox Name="TBLetter8" IsReadOnly = "True" HorizontalAlignment="Left" Height="49" Margin="597,312,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="40"/>
+        <TextBox Name="TBLetter9" IsReadOnly = "True" HorizontalAlignment="Left" Height="49" Margin="656,312,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="40"/>
+
+        <Rectangle Name="HangmanLvl0" Fill="Black" HorizontalAlignment="Left" Height="19" Margin="288,252,0,0" Stroke="Black" VerticalAlignment="Top" Width="138"/>
+        <Rectangle Name="HangmanLvl1" Fill="Black" HorizontalAlignment="Left" Height="153" Margin="351,99,0,0" Stroke="Black" VerticalAlignment="Top" Width="18"/>
+        <Rectangle Name="HangmanLvl2" Fill="Black" HorizontalAlignment="Left" Height="19" Margin="351,80,0,0" Stroke="Black" VerticalAlignment="Top" Width="166"/>
+        <Rectangle Name="HangmanLvl3" Fill="Black" HorizontalAlignment="Left" Height="19" Margin="500,98,0,0" Stroke="Black" VerticalAlignment="Top" Width="17"/>
+        <Ellipse   Name="HangmanLvl4" Fill="Transparent" StrokeThickness="5" HorizontalAlignment="Left" Height="40" Margin="488,117,0,0" Stroke="Black" VerticalAlignment="Top" Width="40"/>
+        <Rectangle Name="HangmanLvl5" Fill="Black" HorizontalAlignment="Left" Height="61" Margin="504,154,0,0" Stroke="Black" VerticalAlignment="Top" Width="9"/>
+        <Rectangle Name="HangmanLvl6" Fill="Black" HorizontalAlignment="Left" Height="42" Margin="498,209,0,0" Stroke="Black" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="17.218"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Name="HangmanLvl7" Fill="Black" HorizontalAlignment="Left" Height="42" Margin="512,207,0,0" Stroke="Black" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-23.488"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Name="HangmanLvl8" Fill="Black" HorizontalAlignment="Left" Height="42" Margin="495,171,0,0" Stroke="Black" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="23.527"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle Name="HangmanLvl9" Fill="Black" HorizontalAlignment="Left" Height="42" Margin="512,170,0,0" Stroke="Black" VerticalAlignment="Top" Width="9" RenderTransformOrigin="0.121,0.378">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-23.488"/>
+                    <TranslateTransform X="-1.76" Y="1.783"/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <TextBox Name="TBUsedLetters" HorizontalAlignment="Left" Height="205" Margin="20,76,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="165"/>
+
+
+
+    </Grid>
+</Window>
