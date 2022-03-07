@@ -22,7 +22,7 @@ namespace SimpleSend
     public partial class MainWindow : Window
     {
         string ServerIP = "127.0.0.1";
-        int ServerPort = 8000;
+        int ServerPort = 8001;
         TcpClient client = null;
 
 
@@ -55,6 +55,7 @@ namespace SimpleSend
 
                 NetworkStream nwStream = client.GetStream();
                 nwStream.Write(bytes, 0, bytes.Length);
+                nwStream.Flush();
             }
         }
 
